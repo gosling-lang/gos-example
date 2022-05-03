@@ -44,12 +44,12 @@ rule convert_vcf:
 rule download_vcf:
 	output: "data/clinvar.vcf"
 	shell: """
-	wget https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar.vcf.gz -O {output}.gz
+	curl https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar.vcf.gz -o {output}.gz
 	gunzip {output}.gz
 	"""
 
 rule download_chromsizes:
 	output: "data/hg38.chrom.sizes"
 	shell: """
-	wget https://raw.githubusercontent.com/igvteam/igv/329449af409bfb7f60e4db5e7793882bd8b5f602/genomes/sizes/hg38.chrom.sizes -O {output}
+	curl https://raw.githubusercontent.com/igvteam/igv/329449af409bfb7f60e4db5e7793882bd8b5f602/genomes/sizes/hg38.chrom.sizes | head -n 24 > {output}
 	"""
