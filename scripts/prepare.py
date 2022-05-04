@@ -159,7 +159,12 @@ def main():
         for chrom, data in rich.progress.track(
             density_dict.items(), description="Writing multivec..."
         ):
-            f.create_dataset(f"chr{chrom}", data=data)
+            f.create_dataset(
+                name=f"chr{chrom}",
+                data=data,
+                compression="gzip",
+                chunks=True,
+            )
 
 
 if __name__ == "__main__":

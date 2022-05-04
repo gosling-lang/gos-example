@@ -1,3 +1,8 @@
+rule all:
+	input:
+		"data/agg/clinvar.bed.beddb",
+		"data/agg/density.multires.mv5"
+
 rule aggregate_multivec:
 	input:
 		chromsizes = "data/hg38.chrom.sizes",
