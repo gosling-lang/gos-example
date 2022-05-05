@@ -6,7 +6,8 @@ import random
 import h5py
 import numpy as np
 import vcf
-from rich import print
+
+import rich.progress
 
 CHR_FILTER = set(map(str, range(1, 23))).union({"X", "Y"})
 
@@ -109,7 +110,6 @@ class DensityDict(dict):
                     d[chrom.lstrip("chr")] = arr
         return d
 
-
 def parse_args():
     # fmt: off
     parser = argparse.ArgumentParser()
@@ -122,10 +122,7 @@ def parse_args():
 
 
 def main():
-    import rich.progress
-
     args = parse_args()
-
     density_dict = DensityDict.from_chromsizes(args.chromsizes)
 
     with open(args.vcf, "r") as fi, open(args.bed, "w") as fo:
