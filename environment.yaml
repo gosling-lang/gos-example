@@ -1,4 +1,4 @@
-name: gos-use-case
+name: gos-example
 channels:
   - bioconda
   - conda-forge
