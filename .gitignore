@@ -1,5 +1,6 @@
 .snakemake/
 data/
+notebooks/UCSC.HG38.Human.CytoBandIdeogram.bed
 .ipynb_checkpoints/
 __pycache__
 .DS_Store
