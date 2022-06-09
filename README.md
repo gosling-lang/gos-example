@@ -2,13 +2,15 @@
 
 This repo contains a set of Jupyter notebooks introducing key features of the [`gos`](https://github.com/gosling-lang/gos) genomics visualization library for Python.
 
+The notebooks can be run via Google Colab,
+
 - `getting-started.ipynb` [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gosling-lang/gos-example/blob/main/notebooks/getting-started.ipynb)
 
 - `data-loading.ipynb` [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gosling-lang/gos-example/blob/main/notebooks/data-loading.ipynb)
 
 - `clinvar.ipynb` [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gosling-lang/gos-example/blob/main/notebooks/clinvar.ipynb)
 
-The notebooks can be run indepedently via Google Colab.
+or locally with Jupyter,
 
 ```bash
 jupyter notebook notebooks/
