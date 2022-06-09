@@ -1,6 +1,6 @@
 import gosling as gos
 
-def _create_gene_annotations_track():
+def gene_annotation_track():
     data = gos.beddb(
         url="https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
         genomicFields=[{"index": 1, "name": "start"}, {"index": 2, "name": "end"}],
@@ -115,5 +115,3 @@ def _create_gene_annotations_track():
         ],
         opacity=gos.value(0.8),
     )
-
-gene_annotation = _create_gene_annotations_track()
