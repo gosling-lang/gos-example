@@ -10,6 +10,8 @@ The notebooks can be run via Google Colab,
 
 - `clinvar.ipynb` [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gosling-lang/gos-example/blob/main/notebooks/clinvar.ipynb)
 
+- `navigation.ipynb` [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gosling-lang/gos-example/blob/main/notebooks/navigation.ipynb)
+
 or locally with Jupyter,
 
 ```bash
