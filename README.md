@@ -1,5 +1,7 @@
 # gos-example
 
+[![DOI](https://zenodo.org/badge/488301676.svg)](https://zenodo.org/badge/latestdoi/488301676)
+
 This repo contains a set of Jupyter notebooks introducing key features of the [`gos`](https://github.com/gosling-lang/gos) genomics visualization library for Python.
 
 The notebooks can be run via Google Colab,
