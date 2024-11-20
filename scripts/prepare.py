@@ -110,6 +110,7 @@ class DensityDict(dict):
                     d[chrom.lstrip("chr")] = arr
         return d
 
+
 def parse_args():
     # fmt: off
     parser = argparse.ArgumentParser()
@@ -131,7 +132,7 @@ def main():
 
         for record in rich.progress.track(reader, description="Converting VCF..."):
             if (
-                not (record.CHROM in CHR_FILTER)
+                record.CHROM not in CHR_FILTER
                 or not (
                     "CLNSIG" in record.INFO
                     and record.INFO["CLNSIG"][0] in SIGNIFICANCE_FILTER

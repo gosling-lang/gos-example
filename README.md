@@ -31,3 +31,14 @@ snakemake -c all data/agg/clinvar.bed.beddb data/agg/density.multires.mv5
 # run the notebook
 jupyter notebook 
 ```
+
+Alternatively, using [uv](https://astral.sh/uv):
+
+```sh
+# brew install llvm (make sure you have `llvm-ar` and specify explicitly)
+# preprocess data
+AR=/opt/homebrew/opt/llvm/bin/llvm-ar uv run snakemake.py -c all data/agg/clinvar.bed.beddb data/agg/density.multires.mv5
+# run the notebook
+uvx juv run notebooks/clinvar.ipynb
+# or uvx juv run notebooks/getting-started.ipynb, etc
+```
